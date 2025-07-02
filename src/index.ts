@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * This script initializes and starts the MCP server for the Apify RAG Web Browser using the Stdio transport.
+ * This script initializes and starts the MCP server for web search providers using the Stdio transport.
  *
  * Usage:
  *   node <script_name>
@@ -8,9 +8,13 @@
  * Example:
  *   node index.js
  */
+import { config } from 'dotenv';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
 import { RagWebBrowserServer } from './server.js';
+
+// Load environment variables from .env file
+config();
 
 async function main() {
     const server = new RagWebBrowserServer();

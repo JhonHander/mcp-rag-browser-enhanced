@@ -35,11 +35,16 @@
     "start": "npm run start:dev",
     "start:prod": "node dist/index.js",
     "start:dev": "tsx src/index.ts",
+    "start:http": "npm run build && node dist/http-server.js",
+    "start:http:dev": "tsx src/http-server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "tsc",
     "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js",
+    "test": "node dist/test-search.js",
+    "docker:build": "docker build -t mcp-rag-web-browser .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env mcp-rag-web-browser"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
@@ -53,8 +58,8 @@
     "@apify/eslint-config-ts": "^0.4.1",
     "@apify/tsconfig": "^0.1.0",
     "@types/express": "^5.0.0",
-    "@types/node": "^20.11.24",
-    "dotenv": "^16.4.7",
+    "@types/node": "^20.19.4",
+    "dotenv": "^16.6.1",
     "eslint": "^9.22.0",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3",
