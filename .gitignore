@@ -8,5 +8,7 @@ node_modules
 apify_storage
 storage
 
-
 .env
+
+# Additional README files (keep only main README.md)
+README-*.md

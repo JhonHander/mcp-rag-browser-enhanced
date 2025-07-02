@@ -1,8 +1,8 @@
 {
-  "name": "@apify/mcp-server-rag-web-browser",
-  "version": "0.1.3",
+  "name": "@jhonhander/mcp-rag-browser-enhanced",
+  "version": "1.0.0",
   "type": "module",
-  "description": "An MCP Server for RAG Web Browser Actor",
+  "description": "Enhanced MCP Server for RAG Web Browser with Tavily integration and HTTP API",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -16,17 +16,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/apify/mcp-server-rag-web-browser"
+    "url": "https://github.com/JhonHander/mcp-rag-browser-enhanced"
   },
   "bugs": {
-    "url": "https://github.com/apify/mcp-server-rag-web-browser/issues"
+    "url": "https://github.com/JhonHander/mcp-rag-browser-enhanced/issues"
   },
-  "homepage": "https://github.com/apify/mcp-server-rag-web-browser",
+  "homepage": "https://github.com/JhonHander/mcp-rag-browser-enhanced",
   "keywords": [
-    "apify",
     "mcp",
     "server",
-    "actors",
+    "rag",
+    "web browser",
+    "tavily",
+    "apify",
+    "search",
+    "ai agents",
+    "langchain",
     "model context protocol",
     "rag",
     "web browser"
@@ -35,8 +40,6 @@
     "start": "npm run start:dev",
     "start:prod": "node dist/index.js",
     "start:dev": "tsx src/index.ts",
-    "start:http": "npm run build && node dist/http-server.js",
-    "start:http:dev": "tsx src/http-server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "tsc",
